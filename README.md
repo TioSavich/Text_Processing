@@ -78,14 +78,39 @@ To verify the environment is set up correctly:
 python example_granite_docling.py
 ```
 
+### Batch Processing
+
+Process multiple documents at once:
+
+```bash
+# Process all PDFs in a directory
+python batch_process.py --directory ./documents --format markdown
+
+# Process specific files
+python batch_process.py file1.pdf file2.docx file3.pdf --output ./converted
+
+# Process all documents with specific extensions
+python batch_process.py --directory ./docs --extensions .pdf .docx --format html
+```
+
+Run with `--help` for more options:
+
+```bash
+python batch_process.py --help
+```
+
 ## Project Structure
 
 ```
 Text_Processing/
 ├── README.md                      # This file
+├── QUICKSTART.md                  # Quick start guide
+├── ARCHITECTURE.md                # Architecture documentation
 ├── requirements.txt               # Python dependencies
 ├── setup.sh                       # Environment setup script
-├── example_granite_docling.py     # Example usage script
+├── example_granite_docling.py     # Single document example
+├── batch_process.py               # Batch processing script
+├── test_environment.py            # Environment verification
 ├── .gitignore                     # Git ignore rules
 └── venv/                          # Virtual environment (created by setup.sh)
 ```
